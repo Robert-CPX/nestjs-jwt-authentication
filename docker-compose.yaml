@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: rob
+      POSTGRES_PASSWORD: havefun123
+      POSTGRES_DB: authdb
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
